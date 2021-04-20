@@ -17,6 +17,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-htmllint": "^0.0.19",
+    "gulp-imagemin": "^7.1.0",
     "jshint": "^2.12.0",
     "panini": "^1.7.1"
   }
