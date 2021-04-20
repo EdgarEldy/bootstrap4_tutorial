@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "panini": "^1.7.1"
   }
 }
