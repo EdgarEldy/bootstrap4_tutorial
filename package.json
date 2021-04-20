@@ -6,6 +6,10 @@
   "author": "Edgar Eldy <ed.eldy21@live.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.14",
     "chalk": "^4.1.0",
     "gulp": "^4.0.2",
