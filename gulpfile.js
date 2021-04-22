@@ -81,3 +81,10 @@ function htmllintReporter(filepath, issues) {
     log(chalk.green.bold("---------------NO HTML LINT ERROR---------------"));
   }
 }
+
+//Lint js files
+function jsLint() {
+  return src("src/assets/js/*.js")
+    .pipe(jshint())
+    .pipe(jshint.reporter("default"));
+}
