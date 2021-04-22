@@ -13,3 +13,5 @@ const newer = require("gulp-newer");
 const babel = require("gulp-babel");
 const chalk = require("chalk");
 const log = console.log;
+
+//Starting development tasks
