@@ -99,3 +99,13 @@ function browserSyncInit(done) {
   watch("src/**/*.html").on("change", browserSync.reload);
   return done();
 }
+
+//Copy images from src/assets/img to dist/assets/img and minify images using imagemin
+function copyImages() {
+  log(chalk.red.bold("---------------OPTIMIZING IMAGES---------------"));
+  return src("src/assets/img/**/*.+(png|jpg|jpeg|gif|svg)")
+    .pipe(newer("dist/assets/img/"))
+    .pipe(imagemin())
+    .pipe(dest("dist/assets/img/"))
+    .pipe(browserSync.stream());
+}
