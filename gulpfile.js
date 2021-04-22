@@ -88,3 +88,14 @@ function jsLint() {
     .pipe(jshint())
     .pipe(jshint.reporter("default"));
 }
+
+//Setting browser-sync
+function browserSyncInit(done) {
+  log(chalk.red.bold("---------------BROWSER SYNC INIT---------------"));
+  browserSync.init({
+    injectChanges: true,
+    server: "./dist",
+  });
+  watch("src/**/*.html").on("change", browserSync.reload);
+  return done();
+}
