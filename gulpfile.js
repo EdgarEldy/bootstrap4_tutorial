@@ -65,3 +65,19 @@ function htmlLint() {
   log(chalk.red.bold("---------------HTML LINTING---------------"));
   return src("dist/**/*.html").pipe(htmllint({}, htmllintReporter));
 }
+
+//Formatting html
+function htmllintReporter(filepath, issues) {
+  if (issues.length > 0) {
+    issues.forEach(function (issue) {
+      log(
+        colors.cyan("[gulp-htmllint] ") +
+          colors.white(filepath + " [" + issue.line + "]: ") +
+          colors.red("(" + issue.code + ") " + issue.msg)
+      );
+    });
+    process.exitCode = 1;
+  } else {
+    log(chalk.green.bold("---------------NO HTML LINT ERROR---------------"));
+  }
+}
