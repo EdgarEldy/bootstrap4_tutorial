@@ -117,3 +117,15 @@ function watchFiles() {
   watch("src/assets/js/*.js", copyJS);
   watch("src/assets/img/**/*", copyImages);
 }
+
+//Copy fonts from src/assets/fonts to dist/assets/fonts
+function copyFonts() {
+  log(
+    chalk.red.bold(
+      "---------------COPYING FONTS INTO DIST FOLDER---------------"
+    )
+  );
+  return src(["src/assets/fonts/*"])
+    .pipe(dest("dist/assets/fonts"))
+    .pipe(browserSync.stream());
+}
