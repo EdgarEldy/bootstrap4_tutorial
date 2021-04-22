@@ -50,3 +50,12 @@ function copyCSS() {
     .pipe(dest("dist/assets/css"))
     .pipe(browserSync.stream());
 }
+
+//Copy js files from src/assets/js to dist/assets/js
+function copyJS() {
+  log(chalk.red.bold("---------------COMPILE CUSTOM.JS---------------"));
+  return src(["src/assets/js/**/*.js"])
+    .pipe(babel())
+    .pipe(dest("dist/assets/js/"))
+    .pipe(browserSync.stream());
+}
