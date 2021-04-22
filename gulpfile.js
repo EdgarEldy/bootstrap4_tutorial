@@ -156,3 +156,16 @@ function cleanDist(done) {
 //Run html and js linters
 exports.lint = series(htmlLint, jsLint);
 
+//Starting compiling files
+exports.development = series(
+  compileHTML,
+  resetPages,
+  copyCSS,
+  copyJS,
+  copyImages,
+  copyFonts,
+  prettyHTML,
+  browserSyncInit,
+  watchFiles,
+  cleanDist
+);
