@@ -42,3 +42,11 @@ function resetPages(done) {
   panini.refresh();
   done();
 }
+
+//Copy css files from src/assets/css to dist/assets/css
+function copyCSS() {
+  log(chalk.red.bold("---------------COPY CSS FILES INTO DIST---------------"));
+  return src(["src/assets/css/*"])
+    .pipe(dest("dist/assets/css"))
+    .pipe(browserSync.stream());
+}
