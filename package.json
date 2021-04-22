@@ -1,0 +1,27 @@
+{
+  "name": "bootstrap4_tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EdgarEldy/bootstrap4_tutorial.git",
+  "author": "Edgar Eldy <ed.eldy21@live.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "ansi-colors": "^4.1.1",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.14",
+    "chalk": "^4.1.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-htmllint": "^0.0.19",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-pretty-html": "^2.0.10",
+    "jshint": "^2.12.0",
+    "panini": "^1.7.1"
+  }
+}
