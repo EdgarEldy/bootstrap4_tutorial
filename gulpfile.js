@@ -59,3 +59,9 @@ function copyJS() {
     .pipe(dest("dist/assets/js/"))
     .pipe(browserSync.stream());
 }
+
+//Detects inconsistent html tags
+function htmlLint() {
+  log(chalk.red.bold("---------------HTML LINTING---------------"));
+  return src("dist/**/*.html").pipe(htmllint({}, htmllintReporter));
+}
