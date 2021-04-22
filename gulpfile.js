@@ -35,3 +35,10 @@ function compileHTML() {
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
 }
+
+//Reset panini cache
+function resetPages(done) {
+  log(chalk.red.bold("---------------CLEARING PANINI CACHE---------------"));
+  panini.refresh();
+  done();
+}
