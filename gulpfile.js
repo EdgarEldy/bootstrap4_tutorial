@@ -109,3 +109,11 @@ function copyImages() {
     .pipe(dest("dist/assets/img/"))
     .pipe(browserSync.stream());
 }
+
+// Starting watching files
+function watchFiles() {
+  watch("src/**/*.html", compileHTML);
+  watch("src/assets/css/*.css", copyCSS);
+  watch("src/assets/js/*.js", copyJS);
+  watch("src/assets/img/**/*", copyImages);
+}
