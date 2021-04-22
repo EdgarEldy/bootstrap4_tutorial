@@ -129,3 +129,17 @@ function copyFonts() {
     .pipe(dest("dist/assets/fonts"))
     .pipe(browserSync.stream());
 }
+
+//Prettify html files
+function prettyHTML() {
+  log(chalk.red.bold("---------------HTML PRETTIFY---------------"));
+  return src("dist/**/*.html")
+    .pipe(
+      prettyHtml({
+        indent_size: 4,
+        indent_char: " ",
+        unformatted: ["code", "pre", "em", "strong", "span", "i", "b", "br"],
+      })
+    )
+    .pipe(dest("dist"));
+}
