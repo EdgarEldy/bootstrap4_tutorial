@@ -143,3 +143,12 @@ function prettyHTML() {
     )
     .pipe(dest("dist"));
 }
+
+//Removing old files from dist folder
+function cleanDist(done) {
+  log(
+    chalk.red.bold("---------------REMOVING OLD FILES FROM DIST---------------")
+  );
+  del.sync("dist");
+  return done();
+}
