@@ -15,3 +15,23 @@ const chalk = require("chalk");
 const log = console.log;
 
 //Starting development tasks
+
+//Compile HTML files using panini
+function compileHTML() {
+  log(
+    chalk.red.bold("---------------COMPILING HTML WITH PANINI---------------")
+  );
+  panini.refresh();
+  return src("src/pages/**/*.html")
+    .pipe(
+      panini({
+        root: "src/pages/",
+        layouts: "src/layouts/",
+        partials: "src/partials/",
+        helpers: "src/helpers/",
+        data: "src/data/",
+      })
+    )
+    .pipe(dest("dist"))
+    .pipe(browserSync.stream());
+}
