@@ -152,3 +152,7 @@ function cleanDist(done) {
   del.sync("dist");
   return done();
 }
+
+//Run html and js linters
+exports.lint = series(htmlLint, jsLint);
+
