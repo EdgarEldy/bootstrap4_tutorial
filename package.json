@@ -5,6 +5,9 @@
   "repository": "https://github.com/EdgarEldy/bootstrap4_tutorial.git",
   "author": "Edgar Eldy <ed.eldy21@live.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "gulp development"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "ansi-colors": "^4.1.1",
